@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,700&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <script>
+        function openTitulo(nombreTitulo) {
+            var i;
+            var x = document.getElementsByClassName("titulo");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(nombreTitulo).style.display = "block";
+        }
+
+        function openParte(partecv) {
+            var i;
+            var x = document.getElementsByClassName("cv");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(partecv).style.display = "block";
+        }
+    </script>
+    <title>Curriculum Vitae</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <button onclick="openParte('primero')">Datos principales</button>
+            <button onclick="openParte('formacion')">Formación</button>
+            <button onclick="openParte('experiencia')">Experiencia</button>
+            <button onclick="openParte('adjunto')">Adjuntoss</button>
+        </nav>
+    </header>
+
+    <div class="principal">
+        <h1>Curriculum Vitae</h1>
+        <h2>Axel Eleazar García Darce</h2>
+        <div class="cv" id="primero">
+            <div class="primero">
+
+                <div class="foto">
+                    <img src="https://lh3.googleusercontent.com/5oU1dnFm0H7vDUjKA2m_Ihh43uBBkX6nU_B718EGWt3GPqnsWHug9vH4bZhPBS0Lo1NQgSLx-UDZkJ2iuQYXMuDE2elqNSBhqtvdf5RwudvKfR-Ozs7zUZtKNau5xBVncOZNPLRtQIz3zOZdWU_wm1Y_6hH5C6v4DJXpzQFO0VMymg_W2Y_rr_7HY0UXgAzLLOZfZajuGCulhRRnhIe5VEZLaJNb_ULQrxQNlSR3DXYCI7yr6tssCXibKAHB91xQ69FczhP_6Kov2KD4ZxaQK8OkSrqs3G-sAscM7EH4Bzrxo7WHRThXb2znewt43K0CrIb7RVXcpi4yZsRnbQ7J3ZttbRCxtnseJ7QinQAezEIx2vqYekHg4qEuDxBg3RGpjQ1Xgj0jHuahs91bL8BDkR9RK92pEqely3ukXophFj1GJOltLlruaOrZcWr3b1Ap9rrKEk9oCnNOq2Pvf5GFImW3PRN-y-GfIXh7ZI1aW9N6mHvLZ-mxVMNt0uoR9HTOe2ip3Bd6ZVItLXSuERTW6Il--XfUeMWLjVmw-7kdZjoKlZl_S91QIYzfSG8a3J5ctfu4dDwrlLWfr-NzoO7rMYTjfByq3DghBeoQLAYl_YvHOHT_gBVw4kqPg8DmKMImD4QVcihnOlqdHfN7gJjqZ4BcCuatGi9HDGCGUbl72bELyIykawMzjmmirKkV=w756-h1008-no?authuser=0"
+                        alt="Foto">
+                </div>
+                <div id="datos">
+                    <h3>Datos principales: </h3>
+                    <ul>
+                        <li>Nombre: Axel Eleazar García Darce</li>
+                        <li>Fecha de Nacimiento: 06/11/1999</li>
+                        <li>Sexo: Masculino</li>
+                        <li>Estado Civil: Soltero</li>
+                        <li>Municipio de Residencia: Managua, Managua</li>
+                        <li>Dirección: Villa Los Garcías, de la Licorería Rostrán; 1 cuadra al norte.</li>
+                        <li>Teléfono: <a href="tel:81380937">81380937</a></li>
+                        <li>Correo: <a href="mailto:agarciadarce@gmail.com">agarciadarce@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="formacion" class="cv" style="display:none">
+
+            <h3>Formación:</h3>
+            <ol>
+                <li>
+                    <h4>Educación Primaria:</h4>
+                    <ul>
+                        <li>Colegio Padre Faustino Miguez Religiosas Calasancias (2003-2011).</li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Educación Secundaria:</h4>
+                    <ul>
+                        <li>Colegio Padre Faustino Miguez Religiosas Calasancias (2012-2017).</li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Educación Superiores:</h4>
+                    <ul>
+                        <li>Universidad Nacional de Ingeniería - Ingeniería de Sistemas.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Otros Estudios: </h4>
+                    <ul>
+                        <li>Cursos de Ciencias de la Computación - CS50 (2018-2019)</li>
+                        <li>Curso de Excel Avanzada (2019)</li>
+                    </ul>
+                </li>
+            </ol>
+
+        </div>
+        <div id="experiencia" class="cv" style="display:none">
+
+
+            <h3>Experiencia Laboral:</h3>
+            <ol>
+                <li>
+                    <h4>Main Teacher Assistant - CS50 (2019-hoy)</h4>
+                </li>
+            </ol>
+        </div>
+        <div class="cv" id="adjunto" style="display:none">
+            <div class="listaElementos">
+                <button onclick="openTitulo('1');">Congreso Nacional de Ingeniería</button>
+                <button onclick="openTitulo('2');">Curso de Excel Avanzado</button>
+                <button onclick="openTitulo('3');">Segundo Foro Tecnológico</button>
+                <button onclick="openTitulo('4');">Feria de Ciencia y Tecnología</button>
+                <button onclick="openTitulo('5');">CS50 Student</button>
+                <button onclick="openTitulo('6');">CS50 Staff</button>
+            </div>
+            <div class="titulos">
+
+                <figure class="titulo" id="1">
+                    <img src="https://lh3.googleusercontent.com/sYVkeaoJM9ZX8D3e6uF9jiVpXOEuu4rsWcAWoXVXuF-y7TTDkq7R-0u3HYVT_PAKufmDlFSY8QUmHU8PJfk8FvfDsXe3hvG2H0NWYgCGfmDcZgFaD19P5UO5R-H9MOyQEnve6yJxZaLKeT9cdIytVY09KZ7e84lw5wR4hdAOqvtDjl9Jri5pJLuu8FseV7Q6sMtHpS0cw7XPFXT1l5X97Zt5fkDGiv9XAsiI8wp8MwSNUk7G27JCUrkPZVXTzgMDXB3wtzCuQsiC3i_IN2fGMFOi5DSVHLTm9i1s18dfzoMf6RxZQtWWEO0OaF-9hFzuXgtFDRjYRNyvBw_GIlzguU2P9D0A3wm0manuKWAONrjXRyNafj5QRKbxMll6bwfQ3RQ9rj2l9HcB8_sYGK_nWRwRLA1mgmcI2Di-xW7oqHNZPRBrqkEONEna6nJ611gA0olUAiHDsrpgCYvx4LVwG4xJGQfifzUzUgINIBq5-dRiaEuTDQaW0nJJ0LOP_UnZgmeKp1MMeqc992FR_wOUBqWd_6sOycdsQ3Din05B594rqBLXTKBk-NI99Yluw1iZprjPKIXl6FfoDfvmbvQCc8BakqvsyS6ZWxlf1mgVWqNgHW2l-FlckL4e8sXtOa2S9MZY_vgjhZYc3E4v1bRve4EgKTFVDowuoX9eL_aDiB9QpnlG0s_MqEpE_lZL4Q=w851-h696-no?authuser=0"
+                        alt="Congreso Nacional de Ingeniería" width="800px">
+                    <figcaption>
+                        Congreso Nacional de Ingeniería
+                    </figcaption>
+                </figure>
+                <figure class="titulo" id="2" style="display:none">
+                    <img src="https://lh3.googleusercontent.com/NhMUhQ59lhReuOWHH5krKDGtt-yZ6yYIFRzVTXtcxoD4GvtMwH_ZlkTD4ccPOOaogLncUD69T4sK6J-31KvUbPq4jc9GvUDUwqHOSK44QLcFstCkHV4mbqUEl2sUulvMlM3Ftek6jS79M8d7eI663WRPa5k7TLzJ08_yQvmRo8ihkbXjexfaz9-DDYxmaXj5rMDGItT4rxnuhT-oLwAgUCDg7iM4J-vAq9eNgub-29f6uiWAz8d29zAEO4AKHE7hhZIUW862N2zittdBuD78ACh9KCR4oHbuXD0S-_uxaSgV6qKPEQRUhF55sZEV6t-G7vzT7wAANJoYbq738QApns2evfPgQWMD2gA2IJj43fUIBf3T3xs4trmaHiiOcwRElM0z-8AP-cgVfmsBGODArd1OGIzznpuiI7d2oGFsiURMNRjrGiUZR1JGYR3QnKMeU2oGspYHo4Pm8Bia637D9X2N4DhD0j1kzAcL2bQrVoHYFahGy38Z50yGMQmQp8dMEQzhlYGMeLinUObD0Rf9bgp5qgazxo2y4V4-npIllYE0r5BwQjhSifzmN43k42FtMwzP1-8YhFQysxIjf1JntC1xjqbsZvNLeYcTrncb7qUAEud-fW-J-SNHQI1nL6ayb_B6xAAT8rlE67PBiCj0w4OuXZOvjpwcw0V3v30eiZnNUUW0pKt57yZBiSP9uA=w874-h696-no?authuser=0"
+                        alt="EXcel Avanzado" width="800px">
+                    <figcaption>
+                        Curso de Excel Avanzado
+                    </figcaption>
+                </figure>
+
+                <figure class="titulo" id="3" style="display:none">
+                    <img src="https://lh3.googleusercontent.com/8gTNRUzwaw-HEY1j10uIFbSy0m_nPDDDAfi7hispDki01eWiU1BA0IBgS-BoKAOXrgM8z_enXlQNmuDqxJ1XmL0KbCWet1imVlaoai-kJaIS6qvIqhm8gQ7oHlBURaS1udzLCrCEcXvyl6fKYspgwYfpF8CEdRrqnUNCr68EvBZR19cGnmNvGViNauSKDc_l3GA34rSFE1TVRUIqFOem7LxkqMiNebw_UYSSZccY2QeMtaV539it_2mHVRe_mS0AhulkGIuLUvIkF41B6UqW4ENkUks4ZCeZWrfFsZQszROxal1_OQnByj_hqEh1zIQD7b58HGK5LxA57-7iqsvbuK1A7jx-yJkLUs_5EcapY9VJFaCrc72ejd3NH7b6wAa1IZAdLjNnzyZoOwJMWj3VvWowDworMzvtUWIxvmLitIqU1P7fdVfW893HrTONx3EtEIoKZiXLR0DJn53c0Cu5dhegH7ettuVJZjUvASc9slqQukhRAOT47DH8t9IE5hJ7iBneGSXNyeWdjWo4OIKuofiJgvguXAoqhdtx9i3Q01ZWNMYVhI5KQjAJlHaiNwLpNoznUFBPDugXjibbY12QaZr0CrgTzykbOpA3IAywQA1eokDYJ1tsrsgGKpQImKXevKVe-Bfy73xNbKqlv2XY9DXex--fmN3bvNvImnbn5iPHopjSV2ekzfqNx0A6wQ=w865-h696-no?authuser=0"
+                        alt="Foro Técnologico de Ingeniería de Sistemas" width="800px">
+                    <figcaption>
+                        Segundo Foro Tecnológico
+                    </figcaption>
+                    https://cs50.harvard.edu/certificates/1f0d95a7-823d-4934-bb18-c102e70324d8
+                </figure>
+                <figure class="titulo" id="4" style="display:none">
+                    <img src="https://lh3.googleusercontent.com/syikl9OF5-ozdK2GBVx0l5zglY8hvp_Q1DXXzTglVZc_rnSssLPLx3wXj5F9H-f3W_QZb2Bstyh0DyHGHSetVvO3F2VnoW1I2ehIMaL4v5yp1ddAC3uQxZk87PsLo3h1tRjng7sT-xLVeDZBW5DZff2TFhycGKaCWB9gO_juPld417WpJVV2IwH8dsiW6xW86jqvJPb1KU-XlBRY-QYBNQgNxye1xg7fPqYU7SkkQMPEUV1Duh7mjp2BWoqxO-rbekqsfS50sy3KhlClsY6p3KLPghi6cMSJ97bjbaYTHfk6y6wRR4pbUEVogig-zxC5Yh2b1LuijTCoEEpgYjiwqIekKaYLWMdRN0hFrEeC7nu4mYDBlnHLFnLFkQV2FIBN1DvysGvgu6qLqoFWwjAVjD3CPS7v5WDTPcClGIVD8B-QM0JdVvQxJYXh2_LfyAwnwkcwiMVb59fsu48c3CC6vUa26YmQikFKR9uWYjOhuyyquF6ZkirsfJxDJi7C9XUsJaUP7BFIqOaig_19MSPZUH3n3xCg1Yd8-HlhgxUKZ7EHGs9SV6vpXHfi_jyoERbB2OHisas_-mzcchgrCXPHNnQoZYANbQ5VvWwuLBEnjPg659ASyWelrtgnc6-gp8ezj0zZ9Rf0-ogtDdEnd6ZcD__-H2UWbOGPvKAKY8MtoVV6Mx1vGCrtc2CNxeItgw=w817-h696-no?authuser=0"
+                        alt="Feri de Ciencia y Tecnología" width="800px">
+                    <figcaption>
+                        Feria de Ciencia y Tecnología
+                    </figcaption>
+                </figure>
+                <figure class="titulo" id="5" style="display:none">
+                    <img src="https://lh3.googleusercontent.com/7OP4tpUqgnOT2_I92DQcYIbR8Q3JJc81tPY6zLKNIbMc6QPojhIIjS1JubXw4DRFa1AmgMHERvkpm9H8mCR3qCXYWxAy-XdkxlHi0ZyNj_dP90ntyNb3JCNeywZfHh3OgK8Wz2X0UQHd8tEwnM_pqLFO7le78zTrdf-t2_2XBIMwU0CUNa2L3ZG2iBZIe3p-ansLq6z-VPw8eeq5H13md05rxgJuXegx-qaqkc-ex7YM9F29RDDbs7zlKgerk49ol3jOdPtp4wcqnFUnRvRzQufDFMojVScdx6RE5x0yQdqv1aal0uaCXSxA0buKPdrFSMRx3Mu22ZVo8Lwk8vSrw-dA7205mIc4PPLV8ltBJIebo99hRszmkgpnWY3auUwUDTRNS7f6eLkOFydFm2rkUHI8CvTWfahppA7ZJ9hLsqSQFLH5BZImWK-SXW8VQSct1bKs_0Db56pmw9YkBpWOtpKCbqYM_JBEpDCoyQ47Npd8sIhISViDN6j8b0s0E9scoWq4U-5e5U8jXP94YQtfnMKHK6vl0oZNbFfLh9Z5aMWCZ8bG47bAfP4c4_zQOzEq9ELQ-udwXpwCw2PbQxYkmKoadGGqCk8y6dsveZiOhqlUEj1l-2zdHAn1l88KKJb7b8tGzE6cKZ3e8xKPnOzbFjC5g7x_V0wOGNiOVnVG5kClU6pb95n3bqI3dtcJsA=w849-h696-no?authuser=0"
+                        alt="CS50 Student" width="800px">
+                    <figcaption>
+                        CS50 Student
+                    </figcaption>
+                </figure>
+                <figure class="titulo" id="6" style="display:none">
+                    <img src="https://lh3.googleusercontent.com/mJW_TrD8rR-jrJJNpsvqGSWr0QeDDEzbO7DSNQYY5jkNCbZGAW6vZqYideH3RAaAfuqPm8UPVvE2QhZra9rOLEFtq9-K12jtaCLY3FpSODLqrdkITtXgybQDsaXqiEAm8i7L_tOTgcmnDVRplBL40iki6pE3C-a_ZaW6V9R4x5zZ21QTMOhXgpnYKjMkfnR46oBhmlvAXiH1OlcSJCNU_0oQ8_2oGMyh3Fa-MlQAvOSC1YAl2nHzEp7YRHvIhQ00qVrEv8gGuis9YP2ZNja52StfNcUS5PpyM8S9pU93ajIOMJgzf81YDIlIJK8w2JfFShAa5bQfpkxLxp1bCmPPItW_ekUH5ZNhFFx8GIj4oVcM7Z9GYwyIdIamm8iuvPtX4ogjkGIstiBXiN-iVTQgRv75aqEDXHvaede2AGwp3PG5WDtHBNnVhFKPvYYyieke3GniIT9A5dsDOzHEuyw_kJOvVxIfN7CoAeFnTq1l_DLWZeHnRCetqQc3hJrAmHbBOuudPNNLtSSzVdud9_Ppq8As02bvB4A8ZRljYSVSsU4TNIYYx3V5YL5Fs6PQdZNCj0rh5BNPHJD-GggXs5ITbnCeUTEiha96svlJfmNoj1E45jjuLJbNz7AVNRPmk1j9_q6oXUR2S1EhaiPZqgbuqM4eaRSzskmJWpYdJu5f5ASIHBghq6YWwQ1hN8OzzQ=w850-h696-no?authuser=0"
+                        alt="CS50 Staff" width="800px">
+                    <figcaption>
+                        CS50 Staff
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
