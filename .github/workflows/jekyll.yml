@@ -13,4 +13,4 @@ jobs:
       with:
         server: pacisauctor.educationhost.cloud
         username: egzosycn
-        password: ${{ secrets.ftp_password }}
+        password: ${{ secrets.FTP_PASSWORD }}
